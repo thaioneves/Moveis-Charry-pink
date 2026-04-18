@@ -1,0 +1,113 @@
+
+body{
+margin: 0;
+font-family: Georgia, 'Times New Roman', Times, serif;
+background-color: #7a8450;
+}
+.grid-container{
+display: grid; 
+grid-template-areas: "header header" "menu conteudo" "footer footer"; 
+grid-template-columns: 200px 2fr; 
+grid-template-rows: auto 3fr auto; 
+}
+header { 
+grid-area: header;
+background-color: #7a8450; 
+color: #FFFFFF; 
+padding: 20px; 
+text-align: center;
+grid-column: span 3;
+}
+header h1{
+    grid-column: span 3;
+}
+ 
+.menu{
+grid-area: menu; 
+padding: 20px;
+background-color:#7d0531;
+color: white;
+}
+.conteudo{
+grid-area: conteudo; 
+background-color: #fed9e1; 
+padding: 20px;
+}
+.footer{
+grid-area: footer;
+background-color: #fefdfe;
+color: #70892e;
+text-align: center;
+padding: 15px 0;
+
+}
+.cards { 
+display: grid; 
+grid-template-columns: repeat(3, 1fr); 
+gap: 15px; 
+margin-top: 20px; 
+}
+.card { 
+padding: 30px; 
+text-align: center; 
+font-weight: bold; 
+border-radius: 8px; 
+border: 2px;
+}
+.card:nth-child(1) { background-color: #7d0531; color: white; } 
+.card:nth-child(2) { background-color: #70892e; color: white; }  
+.card:nth-child(3) { background-color: #7d0531; color: white; } 
+.card:nth-child(4) { background-color: #70892e; color: white; } 
+.card:nth-child(5) { background-color: #7d0531; color: white; }
+.card:nth-child(6) { background-color: #70892e; color: white; } 
+.card:nth-child(5) { background-color: #7d0531; color: white; }
+.card:nth-child(6) { background-color: #70892e; color: white; } 
+
+.galeria-produtos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.produtos-card{
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1 1 300px;
+}
+.produtos-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.produtos-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+.produto-overlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0));
+    color: #ffebed;
+    padding: 30px 15px 15px 15px;
+    opacity: 0;
+    transition: opacity;
+}
+.produtos-card:hover .produto-overlay{
+    opacity: 1;
+}
+.produto-overlay h3{
+    font-size: 1.3rem;
+    margin: 0 0 5px 0;
+    font-weight: 700px;
+}
+.produto-overlay .preco{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
