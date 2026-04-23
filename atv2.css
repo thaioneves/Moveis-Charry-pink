@@ -93,7 +93,7 @@ border: 2px;
     left: 0;
     width: 100%;
     background-color: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.0));
-    color: #ffebed;
+    color: #f2afbc;
     padding: 30px 15px 15px 15px;
     opacity: 0;
     transition: opacity;
@@ -102,12 +102,12 @@ border: 2px;
     opacity: 1;
 }
 .produto-overlay h3{
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     margin: 0 0 5px 0;
     font-weight: 700px;
 }
 .produto-overlay .preco{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 500;
-    color: white;
+    color: #210706;
 }
